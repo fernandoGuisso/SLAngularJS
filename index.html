@@ -12,27 +12,28 @@
     
   </head>
   <body>
-    <div ng-controller="ListaComprasController">
-      <table>
-        <thead>
-          <tr>
-            <td>Produto</td>
-            <td>Quantidade</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="item in itens">
-            <td><input type="checkbox" ng-model="item.comprado"></td>
-            <td><strong> {{ item.produto }} </strong></td>
-            <td> {{ item.quantidade }} </td>
-          </tr>
-        </tbody>
-      </table>
-      <form class="form-inline" name="formItem">
-        <input type="text" ng-model="item.produto">
-        <input type="number" ng-model="item.quantidade">
-        <button ng-click="adicionaItem()">Adicionar Item</button>
-      </form>
+    <div class="row" ng-controller="ListaComprasController">
+      <div class="col-md-6 col-md-offset-3">
+        <table>
+          <thead>
+            <tr>
+              <td>Produto</td>
+              <td>Quantidade</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in itens">
+              <td><input type="checkbox" ng-model="item.comprado"></td>
+              <td><strong> {{ item.produto }} </strong></td>
+              <td> {{ item.quantidade }} </td>
+            </tr>
+          </tbody>
+        </table>
+        <form class="form-inline" name="formItem">
+          <input type="text" ng-model="item.produto">
+          <input type="number" ng-model="item.quantidade">
+          <button ng-click="adicionaItem()">Adicionar Item</button>
+        </form>
     </div>
     <!-- Load JS here for greater good =============================-->
     <!--Loading AngularJS-->
