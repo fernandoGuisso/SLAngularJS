@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <title>Lista de compras com AngularJS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Loading Bootstrap-->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--Loading Flat UI-->
+    <link href="css/flat-ui.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    
+  </head>
+  <body>
+    <div ng-controller="ListaComprasController">
+      <div class="col-md-5 col-md-offset-3">
+        <h2>Shopping List with AngularJS</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <td>Comprado</td>
+              <td>Produto</td>
+              <td>Quantidade</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in itens">
+              <td><label class="checkbox" for="checkbox1"><input type="checkbox" ng-model="item.comprado"></label></td>
+              <td><strong> {{ item.produto }} </strong></td>
+              <td> {{ item.quantidade }} </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row">
+          <form class="form-inline" name="formItem">
+          <input class="form-control input-sm" placeholder="Produto" type="text" ng-model="item.produto">
+          <input class="form-control input-sm" placeholder="Quantidade" type="number" ng-model="item.quantidade">
+          <button class="btn btn-primary" ng-click="adicionaItem()">Adicionar</button>
+        </form>
+      </div>
+      </div>
+    </div>
+    <!-- Load JS here for greater good =============================-->
+    <!--Loading AngularJS-->
+    <script src="js/angular-1.0.1.min.js"></script>
+    <!--Shopping List commands-->
+    <script src="js/list.js"></script>
+    <!--jQuery-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <!--Bootstrap-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <!--Flat UI-->
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/jquery.stacktable.js"></script>
+    <script src="http://vjs.zencdn.net/4.3/video.js"></script>
+    <script src="js/application.js"></script>
+  </body>
+
+</html>
